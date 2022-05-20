@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body  {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-color: rgba(10,23,55,0.5);
+    color: white;
+    font-family: 'Lobster', cursive;
+    
+
+}
+
+#ChampName{
+
+    position: absolute;
+    top: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+    
+
+}
+
+.buttons{
+
+
+    background-color: rgba(238, 238, 238, 0.5);
+    height: 50px;
+    border-radius:50%;
+    width: 50px;
+    outline: none;
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    padding: 0;
+    border:none;
+
+
+}
+
+#butgear{
+
+    background-color: rgba(238, 238, 238, 0.5);
+    height: 50px;
+    border-radius:50%;
+    width: 50px;
+    outline: none;
+    position: absolute;
+    left: 6rem;
+    bottom: 2rem;
+    padding: 0;
+    border:none;
+
+}
+
+#butgear:hover{
+
+
+    background-color: rgba(214, 213, 213, 0.5);
+    transform: scale(1.05); 
+    transition: .5s ease;
+
+}
+
+.buttons:hover{
+
+    background-color: rgba(214, 213, 213, 0.5);
+    transform: scale(1.05); 
+    transition: .5s ease;
+
+
+}
+
+.menu{
+
+
+    font-size: 2rem ;
+    color: black;
+    background-color: white;
+    backdrop-filter: blur(5px) brightness(20%);
+    padding: 2rem;
+    border-radius: 20px;
+    display: none;
+
+
+}
+
+.select{
+
+
+    border-radius: 20px;
+    height: 2rem;
+    width: 6rem;
+    text-align: center;
+    outline: none;
+
+}
+
+select { width: 400px; text-align-last:center; }
+
+#Descrip{
+
+
+    font-size: 1.5rem ;
+
+
+}
+
+html img{
+
+
+    transform: rotate(95deg);
+}

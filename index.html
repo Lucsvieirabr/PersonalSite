@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Training API</title>
+    <link id="icon" rel="icon" href="https://cdn1.iconfinder.com/data/icons/computer-techologies-outline-free/128/ic_league_of_legend_logo-512.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <div id="ChampName">        
+        <h1 id='ChampTitle'>  </h1> 
+        <hr>
+    </div>
+    
+    <button class="buttons" onclick="changeAPI()" > <i class="fa fa-refresh" style="font-size:40px;color:rgb(255, 255, 255)"></i></button>
+    <button onclick="OpenMenu()" class="buttons" id="butgear" ><i class="fa fa-gear" style="font-size:40px;color:rgb(255, 255, 255)"></i></button>
+
+    <div class="menu" id="menu" style="display: none;">
+
+        <h1> Menu</h1>
+        
+        <label for="BackType">Background Style</label>
+    <select onchange="changeBackgroundType()" id="backtype" class="select"  name="BackType">
+
+    
+        <option value="cover">Cover</option>
+        <option value="repeat">Repeat</option>
+
+    </select>
+
+    <br>
+
+    <label for="APItype">API change: </label>
+    <select onchange="changeAPIAll()" id="APItype" class="select"  name="APItype">
+
+    
+        <option value=lol>League of Legend</option>
+        <option value="museum">Museum</option>
+        <option value="rickmorty">Rick and Morty</option>
+        <option value="finalspace">Final Space</option>
+        <option value="dota">Dota</option>
+        <option value="pokemon">Pokémon</option>
+
+
+
+    </select>
+
+    </div>
+    
+</body>
+</html>
