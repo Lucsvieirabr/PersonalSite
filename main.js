@@ -1,4 +1,3 @@
-
 function current_API(){
     return document.getElementById("selectedAPI").value;
 }
@@ -22,7 +21,6 @@ function OpenMenu(){
         document.getElementById('menu').style.setProperty('display', 'none');
     }
 }
-
 function changeBackgroundType(){
 
     var backtype = document.getElementById("backtype").value;
@@ -33,8 +31,10 @@ function changeBackgroundType(){
     }
 
     if(backtype === "cover"){
-        document.getElementById('html').style.backgroundSize='cover';
+        document.getElementById('html').style.backgroundSize='20%';
+        document.getElementById('html').style.backgroundRepeat='no-repeat';
+
     }
 }
 request_API_And_ChangeHTML();
-changeBackgroundType()
+changeBackgroundType();
