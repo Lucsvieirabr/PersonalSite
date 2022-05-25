@@ -1,4 +1,3 @@
-
 function current_API(){
     return document.getElementById("selectedAPI").value;
 }
@@ -34,30 +33,8 @@ function changeBackgroundType(){
     if(backtype === "cover"){
         document.getElementById('html').style.backgroundSize='20%';
         document.getElementById('html').style.backgroundRepeat='no-repeat';
-        document.getElementById('html').style.background= getColorDominantRGB();
-
 
     }
 }
 request_API_And_ChangeHTML();
 changeBackgroundType();
-function getBackgroundImage_Url(){
-    var img = document.getElementById('html').style.backgroundImage;
-    var url = img.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
-    return url;
-}
-
-function getColorDominantRGB(){
-    const colorThief = new ColorThief();
-    const img = new Image();
-    img.addEventListener('load', function() {
-        let integerArrayColor = colorThief.getColor(img);
-        return rgbToHex(integerArrayColor[0], integerArrayColor[1], integerArrayColor[2]);
-    });
-    img.crossOrigin = 'Anonymous';
-    img.src = getBackgroundImage_Url();
-}
-
-function rgbToHex(r, g, b) {
-    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-}
