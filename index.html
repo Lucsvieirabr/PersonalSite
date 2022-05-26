@@ -18,7 +18,7 @@
         <hr>
     </div>
     
-    <button class="buttons" onclick="request_API_And_ChangeHTML()" > <i class="fa fa-refresh" style="font-size:40px;color:rgb(255, 255, 255)"></i></button>
+    <button class="buttons" onclick="changeHTML_to_currentAPI()" > <i class="fa fa-refresh" style="font-size:40px;color:rgb(255, 255, 255)"></i></button>
     <button onclick="OpenMenu()" class="buttons" id="butgear" ><i class="fa fa-gear" style="font-size:40px;color:rgb(255, 255, 255)"></i></button>
 
     <div class="menu" id="menu" style="display: none;">
@@ -36,7 +36,7 @@
     <br>
 
     <label for="APItype">API change: </label>
-    <select onchange="request_API_And_ChangeHTML()" id="selectedAPI" class="select"  name="APItype">
+    <select onchange="changeHTML_to_currentAPI()" id="selectedAPI" class="select"  name="APItype">
 
         <option value="rick-and-morty">Rick and Morty</option>
         <option value="art">Museum</option>
