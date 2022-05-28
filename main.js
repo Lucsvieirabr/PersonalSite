@@ -22,7 +22,7 @@ async function ediBg_toGradientColor(){
             var colorHex = rgbToHex(rgb[0], rgb[1], rgb[2]);
             colorArray.push(colorHex);
         });
-        document.getElementById('html').style.background= `linear-gradient(to bottom right,${dominantcolor}, ${colorArray[1]})`;
+        document.getElementById('html').style.background= `linear-gradient(to bottom right,${dominantcolor}, ${colorArray[1]},${colorArray[2]})`;
     });
 }
 function rgbToHex(r, g, b) {
@@ -38,7 +38,6 @@ async function changeHTML_to_currentAPI(){
     var json = await get_API_JSON();
     document.getElementById('imageBg').style.backgroundImage= "url(" + json.img +')';
     document.getElementById('imageBg').style.backgroundPosition= 'center';
-    document.getElementById('title').innerHTML =  json.title || json.name;
     ediBg_toGradientColor();
 }
 
