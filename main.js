@@ -9,17 +9,17 @@ function request_API(){
 async function ediBg_toGradientColor(){
     const colorThief = new ColorThief();
     const img = new Image();
-    var json = await get_API_JSON();
+    let json = await get_API_JSON();
     img.crossOrigin = 'Anonymous';
     img.src = json.img;
 
     img.addEventListener('load',function() {
-        var colorpalette = colorThief.getPalette(img);
-        var dominnatcolor = colorThief.getColor(img);
+        let colorpalette = colorThief.getPalette(img);
+        let dominnatcolor = colorThief.getColor(img);
         dominantcolor = rgbToHex(dominnatcolor[0], dominnatcolor[1], dominnatcolor[2]);
-        var colorArray = [];
+        let colorArray = [];
         colorpalette.forEach(function(rgb){
-            var colorHex = rgbToHex(rgb[0], rgb[1], rgb[2]);
+            let colorHex = rgbToHex(rgb[0], rgb[1], rgb[2]);
             colorArray.push(colorHex);
         });
         document.getElementById('html').style.background= `linear-gradient(to bottom right,${dominantcolor}, ${colorArray[1]},${colorArray[2]})`;
@@ -35,7 +35,7 @@ async function get_API_JSON(){
 }
 
 async function changeHTML_to_currentAPI(){
-    var json = await get_API_JSON();
+    let json = await get_API_JSON();
     document.getElementById('imageBg').style.backgroundImage= "url(" + json.img +')';
     document.getElementById('imageBg').style.backgroundPosition= 'center';
     ediBg_toGradientColor();
@@ -43,7 +43,7 @@ async function changeHTML_to_currentAPI(){
 
 function OpenMenu(){
     
-    var display = document.getElementById('menu').style.getPropertyValue('display');
+    let display = document.getElementById('menu').style.getPropertyValue('display');
     if(display === "none"){
 
         document.getElementById('menu').style.setProperty('display', 'block');
@@ -54,7 +54,7 @@ function OpenMenu(){
 }
 function changeBackgroundType(){
 
-    var backtype = document.getElementById("backtype").value;
+    let backtype = document.getElementById("backtype").value;
     if(backtype === "repeat"){
         document.getElementById('imageBg').style.backgroundRepeat='round';
     }
